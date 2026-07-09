@@ -94,3 +94,22 @@ body { font-family: 'Inter', sans-serif; color: #2D3E3A; }
 .master-card:hover .master-img {
   transform: scale(1.02);
 }
+/* ===== Мобильное меню ===== */
+#mobileMenu {
+    transition: transform 0.3s ease-in-out;
+}
+
+.mobile-nav-link {
+    transition: all 0.3s ease;
+}
+
+.mobile-nav-link:hover {
+    padding-left: 1rem;
+    color: #5FA89A;
+}
+
+/* ===== Активная кнопка времени в квизе ===== */
+.time-btn.selected {
+    border-color: #5FA89A !important;
+    background: #F2FAF7 !important;
+}
