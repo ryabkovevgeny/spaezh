@@ -2,6 +2,7 @@
 // 1. ДАННЫЕ СЕКЦИЙ
 // ============================================
 const SECTIONS = {
+    home: 'home.html',
     services: 'services.html',
     masters: 'masters.html',
     subscriptions: 'subscriptions.html',
@@ -13,7 +14,7 @@ const SECTIONS = {
 // ============================================
 // 2. ЗАГРУЗКА СЕКЦИЙ
 // ============================================
-let currentSection = 'services';
+let currentSection = 'home';
 
 function loadSection(sectionName) {
     const url = SECTIONS[sectionName];
@@ -43,6 +44,9 @@ function loadSection(sectionName) {
             
             // Закрываем мобильное меню после перехода
             closeMobileMenu();
+            
+            // Скроллим наверх
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         })
         .catch(err => console.error('Ошибка загрузки:', err));
 }
@@ -60,12 +64,6 @@ document.addEventListener('click', function(e) {
             
             // Обновляем hash в URL
             history.pushState(null, null, '#' + section);
-            
-            // Плавно скроллим к контенту
-            const app = document.getElementById('app');
-            if (app) {
-                setTimeout(() => app.scrollIntoView({ behavior: 'smooth', block: 'start' }), 200);
-            }
         }
     }
 });
@@ -73,7 +71,7 @@ document.addEventListener('click', function(e) {
 // Обработка кнопки "Назад" в браузере
 window.addEventListener('popstate', function() {
     const hash = window.location.hash.replace('#', '');
-    const section = SECTIONS[hash] ? hash : 'services';
+    const section = SECTIONS[hash] ? hash : 'home';
     loadSection(section);
 });
 
@@ -271,7 +269,7 @@ document.getElementById('quizModal')?.addEventListener('click', (e) => {
 document.addEventListener('DOMContentLoaded', function() {
     // Проверяем hash в URL для загрузки нужной секции
     const hash = window.location.hash.replace('#', '');
-    const section = SECTIONS[hash] ? hash : 'services';
+    const section = SECTIONS[hash] ? hash : 'home'; // ← ИЗМЕНЕНО: по умолчанию загружается home
     loadSection(section);
 
     // Подсвечиваем активную ссылку в навигации
