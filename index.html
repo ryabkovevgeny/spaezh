@@ -80,20 +80,25 @@
         </div>
     </div>
     <!-- Мобильное меню -->
-    <div id="mobileMenu" class="md:hidden fixed inset-0 top-16 bg-white z-40 transform translate-x-full transition-transform duration-300 shadow-2xl">
-        <nav class="flex flex-col p-6 gap-2">
-            <a href="#services" class="mobile-link text-lg font-medium text-mint-800 hover:text-mint-500 py-4 border-b border-mint-200">Услуги</a>
-            <a href="#masters" class="mobile-link text-lg font-medium text-mint-800 hover:text-mint-500 py-4 border-b border-mint-200">Мастера</a>
-            <a href="#subscriptions" class="mobile-link text-lg font-medium text-mint-800 hover:text-mint-500 py-4 border-b border-mint-200">Абонементы</a>
-            <a href="#promos" class="mobile-link text-lg font-medium text-mint-800 hover:text-mint-500 py-4 border-b border-mint-200">Акции</a>
-            <a href="#reviews" class="mobile-link text-lg font-medium text-mint-800 hover:text-mint-500 py-4 border-b border-mint-200">Отзывы</a>
-            <a href="#contacts" class="mobile-link text-lg font-medium text-mint-800 hover:text-mint-500 py-4 border-b border-mint-200">Контакты</a>
-            <div class="pt-6 flex flex-col gap-3">
-                <a href="tel:+79885054752" class="text-center text-mint-800 font-medium text-lg">+7 (988) 505-47-52</a>
-                <a href="https://dikidi.net/profile/studiya_massazha_spa_yozh_2096629" target="_blank" class="btn-primary px-5 py-2 rounded-full text-white text-sm font-medium">Записаться</a>
-            </div>
-        </nav>
-    </div>
+    <!-- Мобильное меню (гарантированно непрозрачное) -->
+<div id="mobileMenu" 
+     class="md:hidden fixed top-16 left-0 right-0 bottom-0 z-50 transform translate-x-full transition-transform duration-300 ease-in-out" 
+     style="background-color: #ffffff !important; overflow-y: auto;">
+    <nav class="flex flex-col p-6 gap-3 h-full bg-white">
+        <a href="#services" class="mobile-link text-lg font-medium text-mint-800 hover:text-mint-500 py-4 border-b border-mint-200">Услуги</a>
+        <a href="#master" class="mobile-link text-lg font-medium text-mint-800 hover:text-mint-500 py-4 border-b border-mint-200">Мастер</a>
+        <a href="#subscriptions" class="mobile-link text-lg font-medium text-mint-800 hover:text-mint-500 py-4 border-b border-mint-200">Абонементы</a>
+        <a href="#promos" class="mobile-link text-lg font-medium text-mint-800 hover:text-mint-500 py-4 border-b border-mint-200">Акции</a>
+        <a href="#reviews" class="mobile-link text-lg font-medium text-mint-800 hover:text-mint-500 py-4 border-b border-mint-200">Отзывы</a>
+        <a href="#contacts" class="mobile-link text-lg font-medium text-mint-800 hover:text-mint-500 py-4 border-b border-mint-200">Контакты</a>
+        
+        <div class="pt-6 flex flex-col gap-3 mt-auto">
+            <p class="text-center text-sm text-mint-600 font-medium">Работаем только по записи</p>
+            <a href="tel:+79885054752" class="text-center text-mint-800 font-bold text-lg">+7 (988) 505-47-52</a>
+            <a href="https://dikidi.net/profile/studiya_massazha_spa_yozh_2096629" target="_blank" class="btn-primary px-6 py-3 rounded-full text-white font-medium text-center shadow-lg">Записаться онлайн</a>
+        </div>
+    </nav>
+</div>
 </header>
 
 <!-- ===== HERO ===== -->
