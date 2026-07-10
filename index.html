@@ -46,6 +46,7 @@
         .time-btn.selected { border-color: #5FA89A !important; background: #F2FAF7 !important; }
         .modal-backdrop { backdrop-filter: blur(4px); }
         html { scroll-behavior: smooth; }
+        #mobileOverlay { transition: opacity 0.3s ease; }
     </style>
 </head>
 <body class="bg-mint-50">
@@ -80,8 +81,11 @@
         </div>
     </div>
     
-    <!-- Мобильное меню (тёмно-зелёное, непрозрачное) -->
-    <div id="mobileMenu" class="md:hidden fixed inset-0 top-16 z-40 transform translate-x-full transition-transform duration-300 shadow-2xl" style="background-color: #1F3A34 !important;">
+    <!-- Зелёная подложка для мобильного меню -->
+    <div id="mobileOverlay" class="hidden fixed inset-0 top-16 z-30 opacity-0" style="background-color: #1F3A34 !important;"></div>
+    
+    <!-- Мобильное меню -->
+    <div id="mobileMenu" class="md:hidden fixed inset-0 top-16 z-40 transform translate-x-full transition-transform duration-300 shadow-2xl" style="background-color: transparent !important;">
         <nav class="flex flex-col p-6 gap-2">
             <a href="#services" class="mobile-link text-lg font-medium text-white hover:text-mint-300 py-4 border-b border-white/20">Услуги</a>
             <a href="#masters" class="mobile-link text-lg font-medium text-white hover:text-mint-300 py-4 border-b border-white/20">Мастера</a>
@@ -167,7 +171,8 @@
             </div>
 
             <!-- Карточка 2: Релакс -->
-            <div class="fade-up bg-gradient-to-br from-mint-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+            <div class="fade-up bg-gradient-to-br from-mint-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative">
+                <div class="absolute top-4 right-4 bg-mint-600 text-white text-xs font-bold px-3 py-1 rounded-full">Для души</div>
                 <div class="w-14 h-14 rounded-2xl bg-mint-100 flex items-center justify-center mb-6">
                     <svg class="w-7 h-7 text-mint-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
                 </div>
@@ -188,7 +193,8 @@
             </div>
 
             <!-- Карточка 3: Антицеллюлитный -->
-            <div class="fade-up bg-gradient-to-br from-mint-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+            <div class="fade-up bg-gradient-to-br from-mint-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative">
+                <div class="absolute top-4 right-4 bg-mint-600 text-white text-xs font-bold px-3 py-1 rounded-full">Для красоты</div>
                 <div class="w-14 h-14 rounded-2xl bg-mint-100 flex items-center justify-center mb-6">
                     <svg class="w-7 h-7 text-mint-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/></svg>
                 </div>
@@ -337,15 +343,18 @@
                 <div class="bg-white rounded-2xl p-6 text-center shadow-md">
                     <div class="text-4xl font-bold text-mint-800 mb-2">60 мин</div>
                     <div class="text-3xl font-bold gradient-text">2 300 ₽</div>
+                    <p class="text-sm text-mint-600 mt-2">Любой вид массажа</p>
                 </div>
                 <div class="bg-white rounded-2xl p-6 text-center shadow-md ring-2 ring-mint-300 relative">
                     <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-mint-500 text-white text-xs font-bold px-3 py-1 rounded-full">Популярный</span>
                     <div class="text-4xl font-bold text-mint-800 mb-2">90 мин</div>
                     <div class="text-3xl font-bold gradient-text">3 350 ₽</div>
+                    <p class="text-sm text-mint-600 mt-2">Расширенная программа</p>
                 </div>
                 <div class="bg-white rounded-2xl p-6 text-center shadow-md">
                     <div class="text-4xl font-bold text-mint-800 mb-2">120 мин</div>
                     <div class="text-3xl font-bold gradient-text">4 500 ₽</div>
+                    <p class="text-sm text-mint-600 mt-2">Комплексная программа</p>
                 </div>
             </div>
         </div>
@@ -877,6 +886,7 @@
 // Мобильное меню
 const burgerBtn = document.getElementById('burgerBtn');
 const mobileMenu = document.getElementById('mobileMenu');
+const mobileOverlay = document.getElementById('mobileOverlay');
 const burgerIcon = document.getElementById('burgerIcon');
 const closeIcon = document.getElementById('closeIcon');
 let menuOpen = false;
@@ -888,6 +898,15 @@ burgerBtn.addEventListener('click', () => {
     burgerIcon.classList.toggle('hidden', menuOpen);
     closeIcon.classList.toggle('hidden', !menuOpen);
     document.body.style.overflow = menuOpen ? 'hidden' : '';
+    
+    // Показываем/скрываем зелёную подложку
+    if (menuOpen) {
+        mobileOverlay.classList.remove('hidden');
+        setTimeout(() => { mobileOverlay.style.opacity = '1'; }, 10);
+    } else {
+        mobileOverlay.style.opacity = '0';
+        setTimeout(() => { mobileOverlay.classList.add('hidden'); }, 300);
+    }
 });
 
 document.querySelectorAll('.mobile-link').forEach(link => {
@@ -895,6 +914,8 @@ document.querySelectorAll('.mobile-link').forEach(link => {
         menuOpen = false;
         mobileMenu.classList.add('translate-x-full');
         mobileMenu.classList.remove('translate-x-0');
+        mobileOverlay.style.opacity = '0';
+        setTimeout(() => { mobileOverlay.classList.add('hidden'); }, 300);
         burgerIcon.classList.remove('hidden');
         closeIcon.classList.add('hidden');
         document.body.style.overflow = '';
