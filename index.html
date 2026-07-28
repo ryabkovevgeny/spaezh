@@ -266,18 +266,18 @@
 <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-mint-100 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16 md:h-20">
-            <a href="#hero" class="flex items-center gap-2 shrink-0 nav-link">
+            <a href="#hero" class="flex items-center gap-2 shrink-0">
                 <img src="assets/logo.png" alt="СПА ЁЖ — студия массажа в Перми, логотип" class="h-10 w-10 object-contain">
                 <span class="font-serif text-xl md:text-2xl font-semibold text-mint-800">СПА ЁЖ</span>
             </a>
 
             <nav class="hidden lg:flex items-center gap-8" aria-label="Основная навигация">
-                <a href="#services" class="nav-link text-mint-700 hover:text-mint-500 transition text-sm font-medium">Услуги</a>
-                <a href="#masters" class="nav-link text-mint-700 hover:text-mint-500 transition text-sm font-medium">Мастера</a>
-                <a href="#promos" class="nav-link text-mint-700 hover:text-mint-500 transition text-sm font-medium">Акции</a>
-                <a href="#reviews" class="nav-link text-mint-700 hover:text-mint-500 transition text-sm font-medium">Отзывы</a>
-                <a href="#faq" class="nav-link text-mint-700 hover:text-mint-500 transition text-sm font-medium">Вопросы</a>
-                <a href="#contacts" class="nav-link text-mint-700 hover:text-mint-500 transition text-sm font-medium">Контакты</a>
+                <a href="#services" class="text-mint-700 hover:text-mint-500 transition text-sm font-medium">Услуги</a>
+                <a href="#masters" class="text-mint-700 hover:text-mint-500 transition text-sm font-medium">Мастера</a>
+                <a href="#promos" class="text-mint-700 hover:text-mint-500 transition text-sm font-medium">Акции</a>
+                <a href="#reviews" class="text-mint-700 hover:text-mint-500 transition text-sm font-medium">Отзывы</a>
+                <a href="#faq" class="text-mint-700 hover:text-mint-500 transition text-sm font-medium">Вопросы</a>
+                <a href="#contacts" class="text-mint-700 hover:text-mint-500 transition text-sm font-medium">Контакты</a>
             </nav>
 
             <div class="hidden lg:flex items-center gap-4">
@@ -288,22 +288,22 @@
                 <a href="https://dikidi.net/profile/studiya_massazha_spa_yozh_2096629" target="_blank" rel="noopener" class="btn-primary px-5 py-2.5 rounded-full text-white font-medium text-sm">Записаться</a>
             </div>
 
-            <button id="burgerBtn" class="lg:hidden p-2 text-mint-800 hover:bg-mint-50 rounded-lg transition shrink-0" aria-label="Открыть меню">
-                <svg id="burgerIcon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-                <svg id="closeIcon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            <button id="burgerBtn" type="button" class="lg:hidden relative z-[60] p-3 text-mint-800 hover:bg-mint-100 rounded-lg transition shrink-0" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileMenu">
+                <svg id="burgerIcon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                <svg id="closeIcon" class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/></svg>
             </button>
         </div>
     </div>
 
-    <div id="mobileMenu" class="lg:hidden fixed inset-0 top-16 z-40 transform translate-x-full transition-transform duration-300 bg-mint-900/95 backdrop-blur-xl">
-        <nav class="flex flex-col p-6 gap-2 h-full overflow-y-auto" aria-label="Мобильное меню">
-            <a href="#services" class="mobile-link text-xl font-medium text-white hover:text-mint-300 py-3 border-b border-white/10">Услуги</a>
-            <a href="#masters" class="mobile-link text-xl font-medium text-white hover:text-mint-300 py-3 border-b border-white/10">Мастера</a>
-            <a href="#promos" class="mobile-link text-xl font-medium text-white hover:text-mint-300 py-3 border-b border-white/10">Акции</a>
-            <a href="#reviews" class="mobile-link text-xl font-medium text-white hover:text-mint-300 py-3 border-b border-white/10">Отзывы</a>
-            <a href="#faq" class="mobile-link text-xl font-medium text-white hover:text-mint-300 py-3 border-b border-white/10">Вопросы</a>
-            <a href="#contacts" class="mobile-link text-xl font-medium text-white hover:text-mint-300 py-3 border-b border-white/10">Контакты</a>
-            <div class="pt-8 mt-auto mb-8 flex flex-col gap-4 text-center">
+    <div id="mobileMenu" class="hidden lg:hidden fixed top-16 left-0 right-0 bottom-0 z-40 bg-mint-900/98 backdrop-blur-xl overflow-y-auto">
+        <nav class="flex flex-col p-6 gap-2" aria-label="Мобильное меню">
+            <a href="#services" class="mobile-link text-xl font-medium text-white hover:text-mint-300 py-4 border-b border-white/10 transition">Услуги</a>
+            <a href="#masters" class="mobile-link text-xl font-medium text-white hover:text-mint-300 py-4 border-b border-white/10 transition">Мастера</a>
+            <a href="#promos" class="mobile-link text-xl font-medium text-white hover:text-mint-300 py-4 border-b border-white/10 transition">Акции</a>
+            <a href="#reviews" class="mobile-link text-xl font-medium text-white hover:text-mint-300 py-4 border-b border-white/10 transition">Отзывы</a>
+            <a href="#faq" class="mobile-link text-xl font-medium text-white hover:text-mint-300 py-4 border-b border-white/10 transition">Вопросы</a>
+            <a href="#contacts" class="mobile-link text-xl font-medium text-white hover:text-mint-300 py-4 border-b border-white/10 transition">Контакты</a>
+            <div class="pt-8 mt-4 flex flex-col gap-4 text-center">
                 <p class="text-sm text-mint-200 font-medium">Работаем только по записи</p>
                 <a href="tel:+79885054752" class="text-white font-bold text-2xl hover:text-mint-300 transition">+7 (988) 505-47-52</a>
                 <p class="text-mint-300 text-sm">г. Пермь, ул. Петропавловская, 77</p>
@@ -835,59 +835,99 @@
 
 <!-- ===== SCRIPTS ===== -->
 <script>
-    const burgerBtn = document.getElementById('burgerBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const burgerIcon = document.getElementById('burgerIcon');
-    const closeIcon = document.getElementById('closeIcon');
-
-    burgerBtn.addEventListener('click', function() {
-        const isClosed = mobileMenu.classList.contains('translate-x-full');
-        if (isClosed) {
-            mobileMenu.classList.remove('translate-x-full');
+    (function() {
+        'use strict';
+        
+        const burgerBtn = document.getElementById('burgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const burgerIcon = document.getElementById('burgerIcon');
+        const closeIcon = document.getElementById('closeIcon');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        
+        if (!burgerBtn || !mobileMenu) {
+            console.error('Мобильное меню: элементы не найдены');
+            return;
+        }
+        
+        let menuOpen = false;
+        
+        function openMenu() {
+            mobileMenu.classList.remove('hidden');
             burgerIcon.classList.add('hidden');
             closeIcon.classList.remove('hidden');
             document.body.style.overflow = 'hidden';
-        } else {
-            mobileMenu.classList.add('translate-x-full');
-            burgerIcon.classList.remove('hidden');
-            closeIcon.classList.add('hidden');
-            document.body.style.overflow = '';
+            burgerBtn.setAttribute('aria-expanded', 'true');
+            menuOpen = true;
         }
-    });
-
-    document.querySelectorAll('.mobile-link').forEach(function(link) {
-        link.addEventListener('click', function() {
-            mobileMenu.classList.add('translate-x-full');
+        
+        function closeMenu() {
+            mobileMenu.classList.add('hidden');
             burgerIcon.classList.remove('hidden');
             closeIcon.classList.add('hidden');
             document.body.style.overflow = '';
+            burgerBtn.setAttribute('aria-expanded', 'false');
+            menuOpen = false;
+        }
+        
+        function toggleMenu() {
+            if (menuOpen) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        }
+        
+        burgerBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleMenu();
         });
-    });
-
-    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-        anchor.addEventListener('click', function(e) {
-            var targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            var target = document.querySelector(targetId);
-            if (target) {
-                e.preventDefault();
-                var headerHeight = document.querySelector('header').offsetHeight;
-                var targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-                window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+        
+        mobileLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                closeMenu();
+            });
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && menuOpen) {
+                closeMenu();
             }
         });
-    });
-
-    var observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
+        
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 1024 && menuOpen) {
+                closeMenu();
             }
         });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-    document.querySelectorAll('.fade-up').forEach(function(el) { observer.observe(el); });
+        
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            anchor.addEventListener('click', function(e) {
+                var targetId = this.getAttribute('href');
+                if (targetId === '#' || targetId.length < 2) return;
+                var target = document.querySelector(targetId);
+                if (target) {
+                    e.preventDefault();
+                    var headerHeight = document.querySelector('header').offsetHeight;
+                    var targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                }
+            });
+        });
+        
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        
+        document.querySelectorAll('.fade-up').forEach(function(el) { 
+            observer.observe(el); 
+        });
+    })();
 </script>
 
 </body>
