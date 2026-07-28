@@ -3,25 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- === SEO OPTIMIZATION START === -->
+
+    <!-- === SEO === -->
     <title>Массаж Пермь | СПА ЁЖ — студия массажа на Петропавловской, 77</title>
     <meta name="description" content="Профессиональный массаж и СПА в Перми. Мастера Евгений и Наталья. Оздоровительный, антицеллюлитный, релакс массаж. ул. Петропавловская, 77. Запись: +79885054752">
-    <meta name="keywords" content="массаж Пермь, СПА ЁЖ, массажист Пермь, оздоровительный массаж, антицеллюлитный массаж, массаж Петропавловская, студия массажа Пермь, Евгений Рябков">
+    <meta name="keywords" content="массаж Пермь, СПА ЁЖ, массажист Пермь, оздоровительный массаж, антицеллюлитный массаж, массаж Петропавловская, студия массажа Пермь">
     <meta name="robots" content="index, follow">
     <meta name="author" content="СПА ЁЖ">
-    
-    <!-- Open Graph для соцсетей и мессенджеров -->
     <meta property="og:title" content="СПА ЁЖ — Профессиональный массаж в Перми">
     <meta property="og:description" content="Мастера Евгений и Наталья. Оздоровительный и релаксирующий массаж. ул. Петропавловская, 77.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://spaezh.ru">
     <meta property="og:image" content="https://spaezh.ru/assets/hero.jpg">
     <meta property="og:locale" content="ru_RU">
-    
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://spaezh.ru">
-    <!-- === SEO OPTIMIZATION END === -->
 
     <link rel="icon" type="image/png" href="assets/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,7 +43,7 @@
         }
     </script>
     <style>
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; }
         .font-serif { font-family: 'Cormorant Garamond', serif; }
         .gradient-text { background: linear-gradient(135deg, #5FA89A, #3B7266); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
         .btn-primary { background: linear-gradient(135deg, #5FA89A, #3B7266); transition: all 0.3s; }
@@ -60,19 +55,10 @@
         .marquee { overflow: hidden; }
         .marquee-track { display: flex; animation: scroll 30s linear infinite; width: max-content; }
         @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-        .quiz-option.selected { border-color: #5FA89A !important; background: #F2FAF7 !important; }
-        .time-btn.selected { border-color: #5FA89A !important; background: #F2FAF7 !important; }
-        .modal-backdrop { backdrop-filter: blur(4px); }
         html { scroll-behavior: smooth; }
-        
-        /* Исправление для мобильной шапки, чтобы элементы не наезжали друг на друга */
-        @media (max-width: 768px) {
-            header .flex { flex-wrap: nowrap; }
-            .phone-header-mobile { font-size: 0.8rem; }
-        }
     </style>
 
-    <!-- Schema.org Микроразметка для Яндекс и Google -->
+    <!-- Schema.org -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -89,23 +75,14 @@
         "postalCode": "614000",
         "addressCountry": "RU"
       },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 58.0105,
-        "longitude": 56.2270
-      },
+      "geo": { "@type": "GeoCoordinates", "latitude": 58.0105, "longitude": 56.2270 },
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        "opens": "09:00",
-        "closes": "22:00"
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "09:00", "closes": "22:00"
       },
       "priceRange": "1000-4500 RUB",
-      "serviceType": ["Массаж", "СПА-процедуры"],
-      "founder": [
-        { "@type": "Person", "name": "Евгений" },
-        { "@type": "Person", "name": "Наталья" }
-      ]
+      "serviceType": ["Массаж", "СПА-процедуры"]
     }
     </script>
 </head>
@@ -115,54 +92,45 @@
 <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-mint-100 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16 md:h-20">
-            <!-- Логотип -->
-            <a href="#hero" class="flex items-center gap-2 shrink-0">
+            <a href="#hero" class="flex items-center gap-2 shrink-0 nav-link">
                 <img src="assets/logo.png" alt="Логотип СПА ЁЖ Пермь" class="h-10 w-10 object-contain">
                 <span class="font-serif text-xl md:text-2xl font-semibold text-mint-800">СПА ЁЖ</span>
             </a>
-            
-            <!-- Меню (Десктоп) -->
+
             <nav class="hidden lg:flex items-center gap-8">
-                <a href="#services" class="text-mint-700 hover:text-mint-500 transition text-sm font-medium">Услуги</a>
-                <a href="#masters" class="text-mint-700 hover:text-mint-500 transition text-sm font-medium">Мастера</a>
-                <a href="#subscriptions" class="text-mint-700 hover:text-mint-500 transition text-sm font-medium">Абонементы</a>
-                <a href="#promos" class="text-mint-700 hover:text-mint-500 transition text-sm font-medium">Акции</a>
-                <a href="#reviews" class="text-mint-700 hover:text-mint-500 transition text-sm font-medium">Отзывы</a>
-                <a href="#contacts" class="text-mint-700 hover:text-mint-500 transition text-sm font-medium">Контакты</a>
+                <a href="#services" class="nav-link text-mint-700 hover:text-mint-500 transition text-sm font-medium">Услуги</a>
+                <a href="#masters" class="nav-link text-mint-700 hover:text-mint-500 transition text-sm font-medium">Мастера</a>
+                <a href="#reviews" class="nav-link text-mint-700 hover:text-mint-500 transition text-sm font-medium">Отзывы</a>
+                <a href="#contacts" class="nav-link text-mint-700 hover:text-mint-500 transition text-sm font-medium">Контакты</a>
             </nav>
-            
-            <!-- Контакты и кнопка (Десктоп) -->
+
             <div class="hidden lg:flex items-center gap-4">
                 <div class="text-right">
                     <a href="tel:+79885054752" class="text-mint-800 font-bold hover:text-mint-500 transition text-sm block">+7 (988) 505-47-52</a>
                     <span class="text-xs text-mint-600">Петропавловская, 77</span>
                 </div>
-                <a href="https://dikidi.net/profile/studiya_massazha_spa_yozh_2096629" target="_blank" class="btn-primary px-5 py-2.5 rounded-full text-white font-medium text-sm shadow-lg hover:shadow-xl">Записаться</a>
+                <a href="tel:+79885054752" class="btn-primary px-5 py-2.5 rounded-full text-white font-medium text-sm">Записаться</a>
             </div>
 
-            <!-- Бургер (Мобильный) -->
-            <button id="burgerBtn" class="lg:hidden p-2 text-mint-800 hover:bg-mint-50 rounded-lg transition shrink-0" aria-label="Открыть меню">
+            <button id="burgerBtn" class="lg:hidden p-2 text-mint-800 hover:bg-mint-50 rounded-lg transition shrink-0" aria-label="Меню">
                 <svg id="burgerIcon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
                 <svg id="closeIcon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
             </button>
         </div>
     </div>
-    
+
     <!-- Мобильное меню -->
     <div id="mobileMenu" class="lg:hidden fixed inset-0 top-16 z-40 transform translate-x-full transition-transform duration-300 bg-mint-900/95 backdrop-blur-xl">
         <nav class="flex flex-col p-6 gap-2 h-full overflow-y-auto">
             <a href="#services" class="mobile-link text-xl font-medium text-white hover:text-mint-300 py-3 border-b border-white/10">Услуги</a>
             <a href="#masters" class="mobile-link text-xl font-medium text-white hover:text-mint-300 py-3 border-b border-white/10">Мастера</a>
-            <a href="#subscriptions" class="mobile-link text-xl font-medium text-white hover:text-mint-300 py-3 border-b border-white/10">Абонементы</a>
-            <a href="#promos" class="mobile-link text-xl font-medium text-white hover:text-mint-300 py-3 border-b border-white/10">Акции</a>
             <a href="#reviews" class="mobile-link text-xl font-medium text-white hover:text-mint-300 py-3 border-b border-white/10">Отзывы</a>
             <a href="#contacts" class="mobile-link text-xl font-medium text-white hover:text-mint-300 py-3 border-b border-white/10">Контакты</a>
-            
             <div class="pt-8 mt-auto mb-8 flex flex-col gap-4 text-center">
                 <p class="text-sm text-mint-200 font-medium">Работаем только по записи</p>
                 <a href="tel:+79885054752" class="text-white font-bold text-2xl hover:text-mint-300 transition">+7 (988) 505-47-52</a>
                 <p class="text-mint-300 text-sm">г. Пермь, ул. Петропавловская, 77</p>
-                <a href="https://dikidi.net/profile/studiya_massazha_spa_yozh_2096629" target="_blank" class="btn-gold px-6 py-4 rounded-full text-white font-bold text-lg shadow-xl mt-4">Записаться онлайн</a>
+                <a href="tel:+79885054752" class="btn-gold px-6 py-4 rounded-full text-white font-bold text-lg shadow-xl mt-4 text-center">Записаться</a>
             </div>
         </nav>
     </div>
@@ -171,7 +139,7 @@
 <!-- ===== HERO ===== -->
 <section id="hero" class="relative min-h-screen flex items-center overflow-hidden pt-16">
     <div class="absolute inset-0">
-        <img src="assets/hero.jpg" alt="Студия массажа СПА ЁЖ в Перми - интерьер" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1920&h=1080&fit=crop'">
+        <img src="assets/hero.jpg" alt="Студия массажа СПА ЁЖ в Перми" class="w-full h-full object-cover" onerror="this.style.background='#2D564D'">
         <div class="absolute inset-0 bg-gradient-to-r from-mint-900/80 via-mint-800/60 to-transparent"></div>
     </div>
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -183,8 +151,8 @@
                 Профессиональный массаж и СПА-процедуры на ул. Петропавловская, 77
             </p>
             <div class="flex flex-col sm:flex-row gap-4 fade-up">
-                <a href="https://dikidi.net/profile/studiya_massazha_spa_yozh_2096629" target="_blank" class="btn-gold px-8 py-4 rounded-full font-semibold text-lg text-white text-center shadow-lg hover:shadow-xl transition">Записаться онлайн</a>
-                <button onclick="openQuiz()" class="px-8 py-4 rounded-full border-2 border-white text-white font-semibold text-lg hover:bg-white hover:text-mint-900 transition text-center backdrop-blur-sm">Подобрать программу</button>
+                <a href="tel:+79885054752" class="btn-gold px-8 py-4 rounded-full font-semibold text-lg text-white text-center shadow-lg">Записаться</a>
+                <a href="#services" class="nav-link px-8 py-4 rounded-full border-2 border-white text-white font-semibold text-lg hover:bg-white hover:text-mint-900 transition text-center">Наши услуги</a>
             </div>
             <div class="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-white/20 fade-up">
                 <div><div class="text-3xl md:text-4xl font-bold text-white mb-1">5.0★</div><div class="text-sm text-mint-200">рейтинг 2ГИС</div></div>
@@ -210,10 +178,8 @@
             <h2 class="font-serif text-4xl md:text-5xl font-bold text-mint-900 mb-4">Наши услуги</h2>
             <p class="text-lg text-mint-600 max-w-2xl mx-auto">Профессиональный массаж и СПА-процедуры для вашего здоровья, красоты и полного расслабления</p>
         </div>
-
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <!-- Карточка 1: Оздоровительный -->
+
             <article class="fade-up bg-gradient-to-br from-mint-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative border border-mint-100">
                 <div class="absolute top-4 right-4 bg-mint-500 text-white text-xs font-bold px-3 py-1 rounded-full">Популярное</div>
                 <div class="w-14 h-14 rounded-2xl bg-mint-100 flex items-center justify-center mb-6">
@@ -222,20 +188,19 @@
                 <h3 class="font-serif text-2xl font-bold text-mint-900 mb-3">Оздоровительный массаж</h3>
                 <p class="text-mint-600 mb-4">Восстановление здоровья, снятие болей в спине и шее, улучшение самочувствия</p>
                 <ul class="space-y-2 mb-6">
-                    <li class="flex items-center gap-2 text-sm text-mint-700"><svg class="w-4 h-4 text-mint-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Снятие мышечных зажимов</li>
-                    <li class="flex items-center gap-2 text-sm text-mint-700"><svg class="w-4 h-4 text-mint-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Улучшение кровообращения</li>
-                    <li class="flex items-center gap-2 text-sm text-mint-700"><svg class="w-4 h-4 text-mint-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Восстановление подвижности</li>
+                    <li class="flex items-center gap-2 text-sm text-mint-700"><svg class="w-4 h-4 text-mint-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Снятие мышечных зажимов</li>
+                    <li class="flex items-center gap-2 text-sm text-mint-700"><svg class="w-4 h-4 text-mint-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Улучшение кровообращения</li>
+                    <li class="flex items-center gap-2 text-sm text-mint-700"><svg class="w-4 h-4 text-mint-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Восстановление подвижности</li>
                 </ul>
                 <div class="flex items-center justify-between pt-4 border-t border-mint-200">
                     <div class="flex gap-4">
                         <div><span class="text-xs text-mint-500">60 мин</span><div class="text-lg font-bold text-mint-800">2 300₽</div></div>
                         <div><span class="text-xs text-mint-500">90 мин</span><div class="text-lg font-bold text-mint-800">3 350₽</div></div>
                     </div>
-                    <a href="https://dikidi.net/profile/studiya_massazha_spa_yozh_2096629" target="_blank" class="btn-primary px-5 py-2 rounded-full text-white text-sm font-medium">Записаться</a>
+                    <a href="tel:+79885054752" class="btn-primary px-4 py-2 rounded-full text-white text-sm font-medium">Записаться</a>
                 </div>
             </article>
 
-            <!-- Карточка 2: Релакс -->
             <article class="fade-up bg-gradient-to-br from-mint-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative border border-mint-100">
                 <div class="absolute top-4 right-4 bg-mint-600 text-white text-xs font-bold px-3 py-1 rounded-full">Для души</div>
                 <div class="w-14 h-14 rounded-2xl bg-mint-100 flex items-center justify-center mb-6">
@@ -244,20 +209,19 @@
                 <h3 class="font-serif text-2xl font-bold text-mint-900 mb-3">Релаксирующий массаж</h3>
                 <p class="text-mint-600 mb-4">Полное расслабление тела и разума, снятие стресса и напряжения</p>
                 <ul class="space-y-2 mb-6">
-                    <li class="flex items-center gap-2 text-sm text-mint-700"><svg class="w-4 h-4 text-mint-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Глубокий релакс</li>
-                    <li class="flex items-center gap-2 text-sm text-mint-700"><svg class="w-4 h-4 text-mint-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Ароматерапия</li>
-                    <li class="flex items-center gap-2 text-sm text-mint-700"><svg class="w-4 h-4 text-mint-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Снятие усталости</li>
+                    <li class="flex items-center gap-2 text-sm text-mint-700"><svg class="w-4 h-4 text-mint-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Глубокий релакс</li>
+                    <li class="flex items-center gap-2 text-sm text-mint-700"><svg class="w-4 h-4 text-mint-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Ароматерапия</li>
+                    <li class="flex items-center gap-2 text-sm text-mint-700"><svg class="w-4 h-4 text-mint-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Снятие усталости</li>
                 </ul>
                 <div class="flex items-center justify-between pt-4 border-t border-mint-200">
                     <div class="flex gap-4">
                         <div><span class="text-xs text-mint-500">60 мин</span><div class="text-lg font-bold text-mint-800">2 300₽</div></div>
                         <div><span class="text-xs text-mint-500">90 мин</span><div class="text-lg font-bold text-mint-800">3 350₽</div></div>
                     </div>
-                    <a href="https://dikidi.net/profile/studiya_massazha_spa_yozh_2096629" target="_blank" class="btn-primary px-5 py-2 rounded-full text-white text-sm font-medium">Записаться</a>
+                    <a href="tel:+79885054752" class="btn-primary px-4 py-2 rounded-full text-white text-sm font-medium">Записаться</a>
                 </div>
             </article>
 
-            <!-- Карточка 3: Антицеллюлитный -->
             <article class="fade-up bg-gradient-to-br from-mint-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative border border-mint-100">
                 <div class="absolute top-4 right-4 bg-mint-600 text-white text-xs font-bold px-3 py-1 rounded-full">Для красоты</div>
                 <div class="w-14 h-14 rounded-2xl bg-mint-100 flex items-center justify-center mb-6">
@@ -266,43 +230,36 @@
                 <h3 class="font-serif text-2xl font-bold text-mint-900 mb-3">Антицеллюлитный массаж</h3>
                 <p class="text-mint-600 mb-4">Коррекция фигуры, улучшение состояния кожи, видимый результат</p>
                 <ul class="space-y-2 mb-6">
-                    <li class="flex items-center gap-2 text-sm text-mint-700"><svg class="w-4 h-4 text-mint-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Коррекция фигуры</li>
-                    <li class="flex items-center gap-2 text-sm text-mint-700"><svg class="w-4 h-4 text-mint-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Улучшение кожи</li>
-                    <li class="flex items-center gap-2 text-sm text-mint-700"><svg class="w-4 h-4 text-mint-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Видимый результат</li>
+                    <li class="flex items-center gap-2 text-sm text-mint-700"><svg class="w-4 h-4 text-mint-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Коррекция фигуры</li>
+                    <li class="flex items-center gap-2 text-sm text-mint-700"><svg class="w-4 h-4 text-mint-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Улучшение кожи</li>
                 </ul>
                 <div class="flex items-center justify-between pt-4 border-t border-mint-200">
                     <div class="flex gap-4">
                         <div><span class="text-xs text-mint-500">60 мин</span><div class="text-lg font-bold text-mint-800">2 300₽</div></div>
                         <div><span class="text-xs text-mint-500">90 мин</span><div class="text-lg font-bold text-mint-800">3 350₽</div></div>
                     </div>
-                    <a href="https://dikidi.net/profile/studiya_massazha_spa_yozh_2096629" target="_blank" class="btn-primary px-5 py-2 rounded-full text-white text-sm font-medium">Записаться</a>
+                    <a href="tel:+79885054752" class="btn-primary px-4 py-2 rounded-full text-white text-sm font-medium">Записаться</a>
                 </div>
             </article>
 
-            <!-- Карточка 4: Массаж лица -->
             <article class="fade-up bg-gradient-to-br from-mint-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-mint-100">
                 <div class="w-14 h-14 rounded-2xl bg-mint-100 flex items-center justify-center mb-6">
                     <svg class="w-7 h-7 text-mint-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                 </div>
                 <h3 class="font-serif text-2xl font-bold text-mint-900 mb-3">Массаж лица</h3>
-                <p class="text-mint-600 mb-4">Омоложение, улучшение цвета лица, снятие отёчности и напряжения</p>
-                <ul class="space-y-2 mb-6">
-                    <li class="flex items-center gap-2 text-sm text-mint-700"><svg class="w-4 h-4 text-mint-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Лифтинг-эффект</li>
-                    <li class="flex items-center gap-2 text-sm text-mint-700"><svg class="w-4 h-4 text-mint-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Снятие отёков</li>
-                </ul>
+                <p class="text-mint-600 mb-4">Омоложение, улучшение цвета лица, снятие отёчности</p>
                 <div class="flex items-center justify-between pt-4 border-t border-mint-200">
                     <div class="flex gap-4">
                         <div><span class="text-xs text-mint-500">60 мин</span><div class="text-lg font-bold text-mint-800">2 300₽</div></div>
                         <div><span class="text-xs text-mint-500">90 мин</span><div class="text-lg font-bold text-mint-800">3 350₽</div></div>
                     </div>
-                    <a href="https://dikidi.net/profile/studiya_massazha_spa_yozh_2096629" target="_blank" class="btn-primary px-5 py-2 rounded-full text-white text-sm font-medium">Записаться</a>
+                    <a href="tel:+79885054752" class="btn-primary px-4 py-2 rounded-full text-white text-sm font-medium">Записаться</a>
                 </div>
             </article>
 
-             <!-- Карточка 5: Лимфодренаж -->
-             <article class="fade-up bg-gradient-to-br from-mint-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-mint-100">
+            <article class="fade-up bg-gradient-to-br from-mint-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-mint-100">
                 <div class="w-14 h-14 rounded-2xl bg-mint-100 flex items-center justify-center mb-6">
-                    <svg class="w-7 h-7 text-mint-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                    <svg class="w-7 h-7 text-mint-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                 </div>
                 <h3 class="font-serif text-2xl font-bold text-mint-900 mb-3">Лимфодренаж</h3>
                 <p class="text-mint-600 mb-4">Выведение токсинов, снятие отёков, улучшение кровообращения</p>
@@ -311,11 +268,10 @@
                         <div><span class="text-xs text-mint-500">60 мин</span><div class="text-lg font-bold text-mint-800">2 300₽</div></div>
                         <div><span class="text-xs text-mint-500">90 мин</span><div class="text-lg font-bold text-mint-800">3 350₽</div></div>
                     </div>
-                    <a href="https://dikidi.net/profile/studiya_massazha_spa_yozh_2096629" target="_blank" class="btn-primary px-5 py-2 rounded-full text-white text-sm font-medium">Записаться</a>
+                    <a href="tel:+79885054752" class="btn-primary px-4 py-2 rounded-full text-white text-sm font-medium">Записаться</a>
                 </div>
             </article>
 
-            <!-- Карточка 6: Спортивный -->
             <article class="fade-up bg-gradient-to-br from-mint-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-mint-100">
                 <div class="w-14 h-14 rounded-2xl bg-mint-100 flex items-center justify-center mb-6">
                     <svg class="w-7 h-7 text-mint-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
@@ -327,12 +283,12 @@
                         <div><span class="text-xs text-mint-500">60 мин</span><div class="text-lg font-bold text-mint-800">2 300₽</div></div>
                         <div><span class="text-xs text-mint-500">90 мин</span><div class="text-lg font-bold text-mint-800">3 350₽</div></div>
                     </div>
-                    <a href="https://dikidi.net/profile/studiya_massazha_spa_yozh_2096629" target="_blank" class="btn-primary px-5 py-2 rounded-full text-white text-sm font-medium">Записаться</a>
+                    <a href="tel:+79885054752" class="btn-primary px-4 py-2 rounded-full text-white text-sm font-medium">Записаться</a>
                 </div>
             </article>
         </div>
-        
-        <!-- Дополнительные услуги -->
+
+        <!-- Доп. услуги -->
         <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 fade-up">
             <div class="bg-mint-50 rounded-2xl p-6 text-center border border-mint-100">
                 <h4 class="font-bold text-mint-800 mb-2">Альгинатная маска</h4>
@@ -360,44 +316,135 @@
             <h2 class="font-serif text-4xl md:text-5xl font-bold text-mint-900 mb-4">Наши мастера</h2>
             <p class="text-lg text-mint-600 max-w-2xl mx-auto">Профессионалы с многолетним опытом и индивидуальным подходом</p>
         </div>
-        
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-            <!-- Евгений -->
             <div class="bg-white rounded-3xl overflow-hidden shadow-xl fade-up group">
-                <div class="h-80 overflow-hidden relative">
-                    <img src="assets/master-evgeny.jpg" alt="Массажист Евгений Рябков - ведущий мастер СПА ЁЖ" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop'">
+                <div class="h-80 overflow-hidden relative bg-mint-200">
+                    <img src="assets/master-evgeniy.jpg" alt="Массажист Евгений — ведущий мастер СПА ЁЖ Пермь" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                 </div>
                 <div class="p-8">
                     <h3 class="font-serif text-2xl font-bold text-mint-900 mb-2">Евгений</h3>
                     <p class="text-mint-500 font-medium mb-4">Ведущий мастер · Опыт 10+ лет</p>
-                    <p class="text-mint-700 mb-6">Сертифицированный специалист. Специализируется на глубокой проработке мышц, спортивном и оздоровительном массаже. Поможет справиться с болями в спине и восстановиться после нагрузок.</p>
-                    <a href="https://dikidi.net/profile/studiya_massazha_spa_yozh_2096629" target="_blank" class="inline-block btn-primary px-6 py-2 rounded-full text-white text-sm font-medium">Записаться к Евгению</a>
+                    <p class="text-mint-700 mb-6">Сертифицированный специалист. Специализируется на глубокой проработке мышц, спортивном и оздоровительном массаже.</p>
+                    <a href="tel:+79885054752" class="inline-block btn-primary px-6 py-2 rounded-full text-white text-sm font-medium">Записаться к Евгению</a>
                 </div>
             </div>
-
-            <!-- Наталья -->
             <div class="bg-white rounded-3xl overflow-hidden shadow-xl fade-up group">
-                <div class="h-80 overflow-hidden relative">
-                    <img src="assets/master-natalia.jpg" alt="Массажист Наталья - СПА-мастер и эксперт по релаксу" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&h=600&fit=crop'">
+                <div class="h-80 overflow-hidden relative bg-mint-200">
+                    <img src="assets/master-natalia.jpg" alt="Массажист Наталья — СПА-мастер и эксперт по релаксу" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                 </div>
                 <div class="p-8">
                     <h3 class="font-serif text-2xl font-bold text-mint-900 mb-2">Наталья</h3>
                     <p class="text-mint-500 font-medium mb-4">СПА-мастер · Мастер релакса · Опыт 7+ лет</p>
-                    <p class="text-mint-700 mb-6">Эксперт по релаксирующим техникам и ароматерапии. Создаёт атмосферу полного покоя. Идеальный выбор для тех, кто хочет забыть о стрессе и просто отдохнуть.</p>
-                    <a href="https://dikidi.net/profile/studiya_massazha_spa_yozh_2096629" target="_blank" class="inline-block btn-primary px-6 py-2 rounded-full text-white text-sm font-medium">Записаться к Наталье</a>
+                    <p class="text-mint-700 mb-6">Эксперт по релаксирующим техникам и ароматерапии. Создаёт атмосферу полного покоя и гармонии.</p>
+                    <a href="tel:+79885054752" class="inline-block btn-primary px-6 py-2 rounded-full text-white text-sm font-medium">Записаться к Наталье</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ===== КОНТАКТЫ И КАРТА ===== -->
-<section id="contacts" class="py-20 md:py-28 bg-white">
+<!-- ===== ОТЗЫВЫ ===== -->
+<section id="reviews" class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 fade-up">
+            <h2 class="font-serif text-4xl md:text-5xl font-bold text-mint-900 mb-4">Отзывы клиентов</h2>
+            <p class="text-lg text-mint-600 max-w-2xl mx-auto">Что говорят наши клиенты о массаже в СПА ЁЖ</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div class="fade-up bg-mint-50 rounded-3xl p-8 border border-mint-100">
+                <div class="flex items-center gap-1 mb-4">
+                    <span class="text-yellow-400 text-lg">★★★★★</span>
+                </div>
+                <p class="text-mint-700 mb-6 italic">"Потрясающий массаж! Евгений нашёл все проблемные зоны и проработал их. После сеанса спина перестала болеть. Обязательно приду ещё!"</p>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-mint-300 flex items-center justify-center text-white font-bold">А</div>
+                    <div>
+                        <p class="font-bold text-mint-900 text-sm">Анна М.</p>
+                        <p class="text-xs text-mint-500">Оздоровительный массаж</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fade-up bg-mint-50 rounded-3xl p-8 border border-mint-100">
+                <div class="flex items-center gap-1 mb-4">
+                    <span class="text-yellow-400 text-lg">★★★★★</span>
+                </div>
+                <p class="text-mint-700 mb-6 italic">"Наталья — волшебница! Релакс-массаж с ароматерапией — это что-то невероятное. Ушла вся усталость, чувствую себя заново рождённой."</p>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-mint-300 flex items-center justify-center text-white font-bold">Е</div>
+                    <div>
+                        <p class="font-bold text-mint-900 text-sm">Елена К.</p>
+                        <p class="text-xs text-mint-500">Релаксирующий массаж</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fade-up bg-mint-50 rounded-3xl p-8 border border-mint-100">
+                <div class="flex items-center gap-1 mb-4">
+                    <span class="text-yellow-400 text-lg">★★★★★</span>
+                </div>
+                <p class="text-mint-700 mb-6 italic">"Хожу на антицеллюлитный массаж уже месяц, результат заметен! Приятная атмосфера, чистота, профессиональный подход. Рекомендую!"</p>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-mint-300 flex items-center justify-center text-white font-bold">О</div>
+                    <div>
+                        <p class="font-bold text-mint-900 text-sm">Ольга С.</p>
+                        <p class="text-xs text-mint-500">Антицеллюлитный массаж</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fade-up bg-mint-50 rounded-3xl p-8 border border-mint-100">
+                <div class="flex items-center gap-1 mb-4">
+                    <span class="text-yellow-400 text-lg">★★★★★</span>
+                </div>
+                <p class="text-mint-700 mb-6 italic">"Занимаюсь спортом, после тренировок мышцы забиваются. Спортивный массаж у Евгения — лучшее восстановление. Хожу регулярно."</p>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-mint-300 flex items-center justify-center text-white font-bold">Д</div>
+                    <div>
+                        <p class="font-bold text-mint-900 text-sm">Дмитрий В.</p>
+                        <p class="text-xs text-mint-500">Спортивный массаж</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fade-up bg-mint-50 rounded-3xl p-8 border border-mint-100">
+                <div class="flex items-center gap-1 mb-4">
+                    <span class="text-yellow-400 text-lg">★★★★★</span>
+                </div>
+                <p class="text-mint-700 mb-6 italic">"Делала массаж лица — эффект лифтинга заметен сразу! Кожа подтянулась, ушли отёки. Очень довольна результатом, спасибо Наталье!"</p>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-mint-300 flex items-center justify-center text-white font-bold">И</div>
+                    <div>
+                        <p class="font-bold text-mint-900 text-sm">Ирина Л.</p>
+                        <p class="text-xs text-mint-500">Массаж лица</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fade-up bg-mint-50 rounded-3xl p-8 border border-mint-100">
+                <div class="flex items-center gap-1 mb-4">
+                    <span class="text-yellow-400 text-lg">★★★★★</span>
+                </div>
+                <p class="text-mint-700 mb-6 italic">"Удобное расположение в центре, легко добраться. Записалась онлайн, всё чётко по времени. Массаж на высшем уровне!"</p>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-mint-300 flex items-center justify-center text-white font-bold">М</div>
+                    <div>
+                        <p class="font-bold text-mint-900 text-sm">Мария Р.</p>
+                        <p class="text-xs text-mint-500">Лимфодренаж</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== КОНТАКТЫ ===== -->
+<section id="contacts" class="py-20 md:py-28 bg-mint-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div class="fade-up">
                 <h2 class="font-serif text-4xl md:text-5xl font-bold text-mint-900 mb-8">Контакты</h2>
-                
                 <div class="space-y-6">
                     <div class="flex items-start gap-4">
                         <div class="w-12 h-12 rounded-full bg-mint-100 flex items-center justify-center shrink-0">
@@ -406,10 +453,8 @@
                         <div>
                             <h3 class="font-bold text-mint-900 text-lg">Адрес</h3>
                             <p class="text-mint-700">г. Пермь, ул. Петропавловская, 77</p>
-                            <p class="text-sm text-mint-500 mt-1">Центр города, удобная транспортная доступность</p>
                         </div>
                     </div>
-
                     <div class="flex items-start gap-4">
                         <div class="w-12 h-12 rounded-full bg-mint-100 flex items-center justify-center shrink-0">
                             <svg class="w-6 h-6 text-mint-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
@@ -420,7 +465,6 @@
                             <p class="text-sm text-mint-500 mt-1">Звонки, WhatsApp, Telegram</p>
                         </div>
                     </div>
-
                     <div class="flex items-start gap-4">
                         <div class="w-12 h-12 rounded-full bg-mint-100 flex items-center justify-center shrink-0">
                             <svg class="w-6 h-6 text-mint-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
@@ -432,14 +476,11 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="mt-10">
-                    <a href="https://dikidi.net/profile/studiya_massazha_spa_yozh_2096629" target="_blank" class="btn-gold px-8 py-4 rounded-full text-white font-bold text-lg inline-block shadow-lg hover:shadow-xl transition">Записаться онлайн</a>
+                    <a href="tel:+79885054752" class="btn-gold px-8 py-4 rounded-full text-white font-bold text-lg inline-block shadow-lg">Записаться</a>
                 </div>
             </div>
-
-            <div class="h-[400px] lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl fade-up relative bg-gray-200">
-                <!-- Виджет Яндекс.Карт (оптимален для Яндекса). Замените src на свой, если нужно -->
+            <div class="h-[400px] lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl fade-up bg-gray-200">
                 <iframe src="https://yandex.ru/map-widget/v1/?ll=56.2270%2C58.0105&z=17&pt=56.2270%2C58.0105%2Cpm2mnt" width="100%" height="100%" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe>
             </div>
         </div>
@@ -447,19 +488,20 @@
 </section>
 
 <!-- ===== FOOTER ===== -->
-<footer class="bg-mint-900 text-white py-12 border-t border-mint-800">
+<footer class="bg-mint-900 text-white py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
-                <a href="#hero" class="font-serif text-2xl font-bold text-white mb-4 block">СПА ЁЖ</a>
+                <span class="font-serif text-2xl font-bold text-white mb-4 block">СПА ЁЖ</span>
                 <p class="text-mint-200 text-sm">Ваше убежище гармонии в центре Перми. Профессиональный массаж и СПА-процедуры.</p>
             </div>
             <div>
                 <h4 class="font-bold text-lg mb-4">Навигация</h4>
                 <ul class="space-y-2 text-mint-200 text-sm">
-                    <li><a href="#services" class="hover:text-white transition">Услуги</a></li>
-                    <li><a href="#masters" class="hover:text-white transition">Мастера</a></li>
-                    <li><a href="#contacts" class="hover:text-white transition">Контакты</a></li>
+                    <li><a href="#services" class="nav-link hover:text-white transition">Услуги</a></li>
+                    <li><a href="#masters" class="nav-link hover:text-white transition">Мастера</a></li>
+                    <li><a href="#reviews" class="nav-link hover:text-white transition">Отзывы</a></li>
+                    <li><a href="#contacts" class="nav-link hover:text-white transition">Контакты</a></li>
                 </ul>
             </div>
             <div>
@@ -476,60 +518,68 @@
 
 <!-- ===== SCRIPTS ===== -->
 <script>
-    // Mobile Menu Logic
+    // === Мобильное меню ===
     const burgerBtn = document.getElementById('burgerBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     const burgerIcon = document.getElementById('burgerIcon');
     const closeIcon = document.getElementById('closeIcon');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
 
-    function toggleMenu() {
+    burgerBtn.addEventListener('click', function() {
         const isClosed = mobileMenu.classList.contains('translate-x-full');
         if (isClosed) {
             mobileMenu.classList.remove('translate-x-full');
             burgerIcon.classList.add('hidden');
             closeIcon.classList.remove('hidden');
-            document.body.style.overflow = 'hidden'; // Блокируем скролл фона
+            document.body.style.overflow = 'hidden';
         } else {
             mobileMenu.classList.add('translate-x-full');
             burgerIcon.classList.remove('hidden');
             closeIcon.classList.add('hidden');
             document.body.style.overflow = '';
         }
-    }
+    });
 
-    burgerBtn.addEventListener('click', toggleMenu);
-
-    // Close menu when clicking a link
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            toggleMenu();
+    // === Закрытие мобильного меню при клике на ссылку ===
+    document.querySelectorAll('.mobile-link').forEach(function(link) {
+        link.addEventListener('click', function() {
+            mobileMenu.classList.add('translate-x-full');
+            burgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            document.body.style.overflow = '';
         });
     });
 
-    // Fade Up Animation on Scroll
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px"
-    };
+    // === Плавный скролл для ВСЕХ ссылок-якорей ===
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+            var targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            var target = document.querySelector(targetId);
+            if (target) {
+                e.preventDefault();
+                var headerHeight = document.querySelector('header').offsetHeight;
+                var targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+    // === Анимация появления блоков ===
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
                 observer.unobserve(entry.target);
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-    document.querySelectorAll('.fade-up').forEach(el => {
+    document.querySelectorAll('.fade-up').forEach(function(el) {
         observer.observe(el);
     });
-
-    // Placeholder for Quiz Function
-    function openQuiz() {
-        alert('Функция подбора программы будет доступна скоро! Пожалуйста, позвоните нам для консультации по телефону +7 (988) 505-47-52');
-    }
 </script>
 
 </body>
