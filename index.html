@@ -728,6 +728,7 @@
         var burgerIcon = document.getElementById('burgerIcon');
         var closeIcon = document.getElementById('closeIcon');
         var mobileLinks = document.querySelectorAll('.mobile-link');
+        var header = document.querySelector('header');
         
         if (!burgerBtn || !mobileMenu) {
             console.error('Элементы меню не найдены!');
@@ -754,6 +755,24 @@
             menuOpen = false;
         }
         
+        function getHeaderHeight() {
+            return header ? header.offsetHeight : 0;
+        }
+        
+        function smoothScrollTo(targetId) {
+            if (!targetId || targetId === '#' || targetId.length < 2) return;
+            var target = document.querySelector(targetId);
+            if (!target) return;
+            var headerHeight = getHeaderHeight();
+            var targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+            if (targetPosition < 0) targetPosition = 0;
+            try {
+                window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+            } catch (err) {
+                window.scrollTo(0, targetPosition);
+            }
+        }
+        
         burgerBtn.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
@@ -764,11 +783,38 @@
             }
         });
         
+        // Клик по ссылке в мобильном меню:
+        // 1) закрываем меню
+        // 2) ждём, пока браузер применит стили и снимет overflow:hidden
+        // 3) скроллим к цели
         for (var i = 0; i < mobileLinks.length; i++) {
-            mobileLinks[i].addEventListener('click', function() {
+            mobileLinks[i].addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                var targetId = this.getAttribute('href');
+                
                 closeMenu();
+                
+                // Небольшая задержка — надёжнее, чем requestAnimationFrame,
+                // особенно на iOS Safari. 60 мс не заметны глазу.
+                setTimeout(function() {
+                    smoothScrollTo(targetId);
+                }, 60);
             });
         }
+        
+        // Остальные якорные ссылки (не в мобильном меню)
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            if (anchor.classList.contains('mobile-link')) return;
+            anchor.addEventListener('click', function(e) {
+                var targetId = this.getAttribute('href');
+                if (targetId === '#' || targetId.length < 2) return;
+                var target = document.querySelector(targetId);
+                if (!target) return;
+                e.preventDefault();
+                smoothScrollTo(targetId);
+            });
+        });
         
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape' && menuOpen) {
@@ -782,18 +828,11 @@
             }
         });
         
-        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-            anchor.addEventListener('click', function(e) {
-                var targetId = this.getAttribute('href');
-                if (targetId === '#' || targetId.length < 2) return;
-                var target = document.querySelector(targetId);
-                if (target) {
-                    e.preventDefault();
-                    var headerHeight = document.querySelector('header').offsetHeight;
-                    var targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-                }
-            });
+        // Закрываем меню при клике вне его области (по фону) — удобно на телефонах
+        mobileMenu.addEventListener('click', function(e) {
+            if (e.target === mobileMenu) {
+                closeMenu();
+            }
         });
         
         var observer = new IntersectionObserver(function(entries) {
